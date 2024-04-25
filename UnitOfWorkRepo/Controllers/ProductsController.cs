@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using UnitOfWork.Core.Models;
 using UnitOfWork.Services.Interfaces;
 
@@ -6,6 +7,7 @@ namespace UnitOfWorkRepo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("Restaurent")]
     public class ProductsController : ControllerBase
     {
         public readonly IProductService _productService;
